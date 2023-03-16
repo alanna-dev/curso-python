@@ -18,7 +18,19 @@ perguntas = [
     },
 ]
 
-for indice in perguntas:
-    for chave in indice:
-        print(indice.get(chave))
-        
+# for indice in perguntas:
+#     for chave in indice:
+#         print(indice.get(chave))
+
+for pergunta in perguntas:
+    print(pergunta['Pergunta'])
+    for indice, opcoes in enumerate(pergunta['Opções']):
+        print(f'[{indice}]{opcoes}')
+
+    escolha = input('Digite a opção certa: ')
+    escolha_int = int(escolha)
+
+    if escolha_int == pergunta['Resposta']:
+        print('Resposta correta')
+    else:
+        print('Resposta errada')
