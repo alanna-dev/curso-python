@@ -1,0 +1,6 @@
+#precedencia entre operadores aritmeticos
+
+# ()
+# **
+# * / // %
+# + -
